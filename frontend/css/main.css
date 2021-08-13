@@ -1,0 +1,132 @@
+body {
+  margin: auto;
+  padding: 20px;
+  max-width: 1440px;
+  background-color: white;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", Times, serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid black;
+  margin-bottom: 16px;
+}
+
+header h1 {
+  font-size: 2em;
+  text-align: center;
+  width: 100%;
+}
+
+header a {
+  position: absolute;
+  right: 0px;
+  top: 18.4px;
+}
+
+header a i {
+  position: relative;
+  font-size: 3em;
+  color: black;
+}
+
+header a span {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  padding: 2px;
+  color: red;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 1em;
+  bottom: 28px;
+  right: 8px;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section h2 {
+  width: 100%;
+}
+
+section .teddyVignettes {
+  width: 335px;
+  height: 328px;
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  -webkit-box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+section .teddyVignettes .teddyImage {
+  width: 335px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 174px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+section .teddyVignettes .teddyInfo {
+  width: 335px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section .teddyVignettes .teddyInfo .teddyInfoTitle {
+  margin: 8px 0px;
+}
+
+section .teddyVignettes .teddyInfo .teddyInfoDescription .paragraphe {
+  margin: 8px 0px;
+  font-size: 1em;
+}
+
+section .teddyVignettes .teddyInfo .teddyInfoDescription .bold {
+  font-weight: bolder;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 16px;
+  border-top: 1px solid black;
+  height: 100px;
+}
+/*# sourceMappingURL=main.css.map */

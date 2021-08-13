@@ -1,0 +1,103 @@
+@import "./pages/body";
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 16px;
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+  }
+  a {
+    i {
+      font-size: 3em;
+      color: black;
+    }
+    span {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      padding: 2px;
+
+      color: red;
+      font-weight: bold;
+      background-color: white;
+      border-radius: 50%;
+      font-size: 1em;
+      bottom: 44px;
+      right: 8px;
+    }
+  }
+}
+
+main {
+  // border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 32px;
+  box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+  .teddyImage {
+    display: flex;
+    max-width: 800px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .info {
+    padding: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    .teddyTitle {
+      font-size: 2.2em;
+      margin: 16px 0px;
+    }
+    .tilteDescription {
+      margin: 8px 0px;
+    }
+    .teddyDescription {
+      margin: 4px 0px;
+    }
+    .teddyPrice {
+      font-weight: bolder;
+      margin: 16px 0px;
+    }
+
+    #teddyColors {
+      height: 48px;
+      margin: 8px 0px;
+      font-size: 1em;
+      cursor: pointer;
+      padding-left: 18px;
+    }
+    #bouttonValidation {
+      height: 48px;
+      font-size: 1em;
+      font-weight: bolder;
+      color: white;
+      background-color: black;
+      cursor: pointer;
+      border: none;
+    }
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  border-top: 1px solid black;
+  height: 100px;
+}
+
+// https: ; //github.com/Lilimly/orinoco/blob/master/js/index.js

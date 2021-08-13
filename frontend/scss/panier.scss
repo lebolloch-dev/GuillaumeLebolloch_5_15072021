@@ -1,0 +1,222 @@
+@import "./pages/body";
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 16px;
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+  }
+  a {
+    i {
+      font-size: 3em;
+      color: black;
+    }
+  }
+}
+
+main {
+  display: flex;
+  width: 100%;
+
+  flex-wrap: wrap;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .productPanier {
+    position: relative;
+    width: 64%;
+    height: fit-content;
+
+    margin-right: 8px;
+    // border: 1px solid black;
+    box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+    .listProduct {
+      border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      //   margin: 16px;
+      padding: 16px;
+
+      .teddyImage {
+        display: flex;
+        max-width: 150px;
+
+        img {
+          width: 100%;
+        }
+      }
+      i {
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+    }
+    .validation {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      background-color: white;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      justify-content: flex-start;
+      align-items: center;
+      opacity: 1;
+      .infoPersonnelle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .input {
+          width: 300px;
+          height: 40px;
+          margin: 8px;
+          border-color: grey;
+
+          &:focus {
+            border-left: 3px solid #555d5e;
+            outline: none;
+          }
+
+          &::placeholder {
+            font-size: 1.2em;
+            padding-left: 16px;
+          }
+        }
+
+        .submitButton {
+          width: 300px;
+          height: 40px;
+          margin: 8px;
+          font-size: 1em;
+          font-weight: bolder;
+          color: white;
+          background-color: grey;
+
+          border: none;
+        }
+        .annul {
+          text-align: center;
+          width: 150px;
+          height: 40px;
+          margin: 8px;
+          font-size: 0.9em;
+          font-weight: bolder;
+          color: #ab374b;
+          background-color: white;
+          cursor: pointer;
+          border-color: #ab374b;
+        }
+      }
+    }
+  }
+  .totalPanier {
+    // border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 33%;
+    padding: 16px;
+    margin-left: 8px;
+    height: fit-content;
+    box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+
+    .product {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .quantity {
+        font-size: 1.5em;
+      }
+      .quantityTotal {
+        font-size: 1.3em;
+      }
+    }
+
+    .price {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .total {
+        font-size: 2em;
+        font-weight: bolder;
+      }
+      .totalPrice {
+        font-size: 2em;
+        font-weight: bolder;
+      }
+    }
+
+    #bouttonValidation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      font-size: 1.2em;
+      font-weight: bolder;
+      color: white;
+      background-color: black;
+      cursor: pointer;
+      border: none;
+    }
+
+    #trashAll {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      margin-top: 16px;
+      font-size: 1em;
+      font-weight: bolder;
+      color: #ab374b;
+      background-color: white;
+      cursor: pointer;
+      border-color: #ab374b;
+    }
+  }
+
+  .titlePanierVide {
+    font-weight: bolder;
+    font-size: 2em;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  border-top: 1px solid black;
+  height: 100px;
+}
+
+@media screen and (max-width: 760px) {
+  main {
+    flex-direction: column;
+
+    .productPanier {
+      width: 100%;
+      margin: 8px;
+      margin-bottom: 16px;
+
+      .listProduct {
+        flex-wrap: wrap;
+      }
+    }
+
+    .totalPanier {
+      width: 100%;
+    }
+  }
+}

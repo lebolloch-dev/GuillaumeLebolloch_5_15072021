@@ -1,0 +1,49 @@
+@import "./pages/body";
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 16px;
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .retourPage {
+    width: 250px;
+    height: 50px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border: none;
+    margin-top: 19.2px;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  border-top: 1px solid black;
+  height: 100px;
+}
