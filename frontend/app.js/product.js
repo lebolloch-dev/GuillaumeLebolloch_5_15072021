@@ -2,19 +2,6 @@
 const urlSearch = new URLSearchParams(window.location.search);
 const id = urlSearch.get("id");
 
-// Création de la fontion compteur de produit dans l'icone Panier @refreshCart
-const refreshCart = function () {
-  const panier = JSON.parse(localStorage.getItem("panier"));
-  console.log(panier);
-
-  if (panier == null || panier.length === 0) {
-  } else {
-    const number = document.getElementById("number");
-
-    number.innerHTML = panier.length;
-  }
-};
-
 // Appel API FETCH avec un ciblage de produit grace à L'ID récupéré plus haut. Cela dans une fonction Async @pageTeddy
 const pageTeddy = async function () {
   try {
@@ -114,12 +101,14 @@ const pageTeddy = async function () {
       });
     }
   } catch (err) {
-    alert("Erreur : ");
+    alert(
+      "Erreur : Nous n'avons pas pu charger le produit, veuillez réessayer plus tard. "
+    );
   }
 };
 
-// appel des fonctions créés plus haut
-
+// appel des fonctions @pageTeedy
 pageTeddy();
 
+// Appel de la Fonction @refreshCart
 refreshCart();

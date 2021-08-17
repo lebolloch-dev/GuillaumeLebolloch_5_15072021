@@ -169,7 +169,7 @@ else {
   fName.required = true;
 
   fName.addEventListener("change", function (e) {
-    if (/^[A-Z-a-zàâçéèêëîïôûùüÿñæœ\s]{3,30}$/.test(e.target.value)) {
+    if (/^[A-Z-a-zàâçéèêëîïôûùüÿñæœ\s]{3,20}$/.test(e.target.value)) {
       fName.style.borderColor = "#b0f2b6";
       disableSubmit(false);
     } else {
@@ -232,7 +232,7 @@ else {
   city.required = true;
 
   city.addEventListener("change", function (e) {
-    if (/^[A-Z-a-z-zàâçéèêëîïôûùüÿñæœ\s]{3,30}$/.test(e.target.value)) {
+    if (/^[A-Z-a-z-zàâçéèêëîïôûùüÿñæœ\s]{3,45}$/.test(e.target.value)) {
       city.style.borderColor = "#b0f2b6";
       disableSubmit(false);
     } else {

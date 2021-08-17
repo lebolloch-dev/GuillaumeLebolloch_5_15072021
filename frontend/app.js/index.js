@@ -1,8 +1,5 @@
 const section = document.querySelector("section");
-/*
 
-
-*/
 // Appel API FETCH dans une fonction Async @getteedyVignettes
 const getTeddyVignettes = async function () {
   try {
@@ -58,23 +55,6 @@ const getTeddyVignettes = async function () {
 
 // Appel de la fonction @getteedyVignettes
 getTeddyVignettes();
-
-/*
-
-
-*/
-
-// Création de la fontion compteur de produit dans l'icone Panier @refreshCart
-const refreshCart = function () {
-  const panier = JSON.parse(localStorage.getItem("panier"));
-
-  if (panier == null || panier.length === 0) {
-  } else {
-    const number = document.getElementById("number");
-
-    number.innerHTML = panier.length;
-  }
-};
 
 // Appel de la Fonction @refreshCart
 refreshCart();
