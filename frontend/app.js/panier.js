@@ -75,17 +75,19 @@ else {
   total.innerHTML = "Total: ";
 
   // Prix total du panier
-  let cartTotal = [];
-  for (i = 0; i < panier.length; i++) {
-    let cartPrice = panier[i].teddyPrice / 100;
-    cartTotal.push(cartPrice);
-  }
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  const totalPriceReduce = cartTotal.reduce(reducer);
+  const refreshTotalPrice = function () {
+    let total = 0;
+    for (i = 0; i < panier.length; i++) {
+      total += panier[i].teddyPrice / 100;
+    }
+    return { total: total };
+  };
+
+  let cartData = refreshTotalPrice();
   const totalPrice = document.createElement("p");
   price.appendChild(totalPrice);
   totalPrice.classList.add("totalPrice");
-  totalPrice.innerHTML = totalPriceReduce + "€";
+  totalPrice.innerHTML = cartData.total + "€";
 
   // Boutton de validation du panier
   const bouttonValidation = document.createElement("button");
@@ -97,11 +99,11 @@ else {
   bouttonValidation.addEventListener("click", function (e) {
     e.preventDefault();
 
-    if (cartTotal.length < 4) {
+    if (panier.length < 4) {
       productPanier.style.height = "550px";
     }
-
     // aparition de la div validation, et suppression des bouton vider tout le panier et validation du panier
+    window.top.scrollTo(0, 110);
     validation.style.display = "flex";
     bouttonValidation.style.display = "none";
     trashAll.style.display = "none";
@@ -128,7 +130,7 @@ else {
   let trashButton = document.getElementsByClassName("trashIcon");
 
   for (let i = 0; i < trashButton.length; i++) {
-    trashButton[i].addEventListener("click", function () {
+    trashButton[i].addEventListener("click", function (e) {
       trashButton.id = i;
 
       panier.splice(trashButton.id, 1);
@@ -323,7 +325,7 @@ else {
           // Stockage du Prenom du client dans le localStorage
           localStorage.setItem("orderName", contact.firstName);
           // Stockage du Prix de la commande dans le localStorage
-          localStorage.setItem("orderPrice", totalPriceReduce);
+          localStorage.setItem("orderPrice", cartData.total);
 
           // redirection sur la page confirmation
           window.location = "confirmation.html";
